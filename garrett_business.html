@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Garrett Money</title>
+
+        <link rel="stylesheet" href="G_feature_page.css">
+        <script src="garrett_javascript.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Abel%7cNews+Cycle%7cPlayball%7cPoiret+One%7cQuicksand" rel="stylesheet">
+    </head>
+
+<body>
+<div class="logo"> 
+	<a href="garrett_home.html">
+	    <img id="logo" alt="G$" src="imgs/modernlogo.PNG">
+	</a>
+</div>
+
+<nav>
+	<ul>
+
+	    <li><a href="garrett_art.html">art</a></li>
+	    <li><a href="garrett_tech.html">technology</a></li>
+	    <li><a class ="active" href="garrett_business.html">business</a></li>
+	    <li><a href="garrett_contact.html">contact</a></li>
+	</ul>
+</nav>
+
+<div class="bar">  </div>
+<img alt="profile picture" class="profile" src="imgs/business.JPG">
+
+<div class="description"> 
+	<h1>BUSINESS</h1>
+	<h3>Paintings | Prints | Tech</h3>
+</div>
+
+<div class="sidepad"></div>
+
+<div class="sidebox"></div>
+
+<div class="feature_section">
+    <h2>Painting</h2>
+        <p> <img class="featureimg" alt="software" src="painting/paintbrush.jpg">
+            As mentioned early on the "Art page", there are lots of paintings that I have already done. That doesn't necessarily mean that they aren't for sale. If you would like to purchase a painting that I have done or if you have a certain painting you want done, I can do it! I have practiced the Bob Ross wet-on-wet technique for quite awhile and have good experience at nailing down landscapes. In the past, people have commissioned me at roughly $0.25 / square inch of painting. To see what people have ordered in the past, click <a href="\/ice.truman.edu/~gam3281/showPaintOrders.php">here! </a>If you would like to commission me to do a painting, submit the form below including the size, paint, and if it's a Bob Ross video, link! 
+        </p>
+<!-- added form html inputs with a table structure-->
+<div class="form">
+<table>
+    <form onsubmit="return confirm('Are you sure you want to submit this order?');" action="painting_form.php" method = "post" enctype="multipart/form-data">
+         <td> <h3 id="title">Commission Painting</h3>
+          <img id="emblem" alt="G$" src="imgs/modernlogo.PNG" width="120" height="120">
+         </td>
+         <td>
+<!--Contact information in table form - mostly text inputs -->
+          <h2>Contact Information </h2>
+          <h4>Name: <input type="text" name="name" size ="40"/> </h4>
+          <h4>Email:  <input type="text" name="email" size ="41"/> </h4>
+          <h4>Phone: <input type="text" name="phone" size ="40"/> </h4>   
+          <h4>City: 
+                 <input type="text" name="city" size ="20"/> 
+              State:
+                 <select name="state"> 
+<!--State dropdown list with all abbreviations-->
+                    <option value=""></option><option value="MO">AL</option>
+                    <option value="AK">AK</option>
+                    <option value="AZ">AZ</option>
+                    <option value="AR">AR</option>
+                    <option value="CA">CA</option>
+                    <option value="CO">CO</option>
+                    <option value="CT">CT</option>
+                    <option value="DE">DE</option>
+                    <option value="FL">FL</option>
+                    <option value="GA">GA</option>
+                    <option value="HI">HI</option>
+                    <option value="ID">ID</option>
+                    <option value="IL">IL</option>
+                    <option value="IN">IN</option>
+                    <option value="IA">IA</option>
+                    <option value="KS">KS</option>
+                    <option value="KY">KY</option>
+                    <option value="LA">LA</option>
+                    <option value="ME">ME</option>
+                    <option value="MD">MD</option>
+                    <option value="MA">MA</option>
+                    <option value="MI">MI</option>
+                    <option value="MN">MN</option>
+                    <option value="MS">MS</option>
+                    <option selected="selected" value="MO">MO</option>
+                    <option value="MT">MT</option>
+                    <option value="NE">NE</option>
+                    <option value="NV">NV</option>
+                    <option value="NH">NH</option>
+                    <option value="NJ">NJ</option>
+                    <option value="NM">NM</option>
+                    <option value="NY">NY</option>
+                    <option value="NC">NC</option>
+                    <option value="ND">ND</option>
+                    <option value="OH">OH</option>
+                    <option value="OK">OK</option>
+                    <option value="OR">OR</option>
+                    <option value="PA">PA</option>
+                    <option value="RI">RI</option>
+                    <option value="SC">SC</option>
+                    <option value="SD">SD</option>
+                    <option value="TN">TN</option>
+                    <option value="TX">TX</option>
+                    <option value="UT">UT</option>
+                    <option value="VT">VT</option>
+                    <option value="VA">VA</option>
+                    <option value="WA">WA</option>
+                    <option value="WV">WV</option>
+                    <option value="WI">WI</option>
+                    <option value="WY">WY</option>
+                 </select>
+              </h4>
+              <h4>Zip-Code: <input type="text" name="zip" size ="5"/>  </h4>
+            
+          <h4>Address: <input type="text" name="address" size ="38"/> </h4></td>  
+<td> 
+          <h3>What would you like me to paint? </h3>
+<!-- I implemented a very cool feature to search the contents of my gallery if the title is typed in with respect to the format. It then shows up on the results page -->
+               <input type="radio" name="source" value="gallery"/> 
+                A painting seen on the art page of this site <br>
+                   <input type="text" size="50" name="gallery_link" placeholder="ex: MistyMountains..."> <br> <br>
+               <input type="radio" name="source" value="ross"/> 
+                A duplicate of your favorite Bob Ross painting <br>
+                   <input type="text" size="50" name="html_link" placeholder="paste link...">
+                   <br> <br>
+               <input type="radio" name="source" value="landscape"/> 
+                Landscape image <br>
+                    <input type="text" name="links" size="50" placeholder="image URL..."> <br>
+                
+               <h4>Additional comments:</h4>
+               <textarea type="text" name="comment" rows="5" cols="50" placeholder="Describe your painting here..."></textarea>
+          <h3> Please enter the desired size of the painting (inches): </h3>
+              <h4>
+                  width: 
+                     <input type="text" name="width" size = "2">
+                  height: 
+                     <input type="text" name="height" size = "2">
+              </h4>
+          <input type="submit" value="Submit form">
+       </td>
+     </form>
+    </table>
+  </div>
+</div>
+
+<div class="feature_section">
+    <h2>Prints</h2>
+        <p> <img class="featureimg" alt="software" src="hardware/Prints/BBB.JPG">
+            Having a 3D printer, I have access to print anything I find. I would like to share my access with you! If you already know what you want to print, send me a .stl file of the print and any specifications you might want. If you have a vision of what you want to print but don't have a design, indicate that in the order form and I can design something for you. That being said, more difficult designs are sometimes out of my reach for producing due to the "free" software I used to design. The best place to find designs online is called <a href="https://www.thingiverse.com/">Thingiverse</a>. To see what other people have requested, click <a href="\/ice.truman.edu/~gam3281/showPrintOrders.php">here! </a>If you have anything you want me to print and send you, fill out the form below:
+        </p>
+
+<div class="form">
+<table>
+    <form onsubmit="return confirm('Are you sure you want to submit this order?');" action="print_form.php" method = "post" enctype="multipart/form-data">
+         <td> <h3 id="title">Commission Printing</h3>
+          <img id="emblem" alt="G$" src="imgs/modernlogo.PNG" width="120px" height="120px">
+</td>
+         <td>
+          <h2>Contact Information </h2>
+          <h4>Name: <input type="text" name="name" size ="40"/> </h4>
+          <h4>Email:  <input type="text" name="email" size ="41"/> </h4>
+          <h4>Phone: <input type="text" name="phone" size ="40"/> </h4>   
+          <h4>City: 
+                 <input type="text" name="city" size ="20"/> 
+              State:
+                 <select name="state">
+                    <option value=""></option><option value="MO">AL</option>
+                    <option value="AK">AK</option>
+                    <option value="AZ">AZ</option>
+                    <option value="AR">AR</option>
+                    <option value="CA">CA</option>
+                    <option value="CO">CO</option>
+                    <option value="CT">CT</option>
+                    <option value="DE">DE</option>
+                    <option value="FL">FL</option>
+                    <option value="GA">GA</option>
+                    <option value="HI">HI</option>
+                    <option value="ID">ID</option>
+                    <option value="IL">IL</option>
+                    <option value="IN">IN</option>
+                    <option value="IA">IA</option>
+                    <option value="KS">KS</option>
+                    <option value="KY">KY</option>
+                    <option value="LA">LA</option>
+                    <option value="ME">ME</option>
+                    <option value="MD">MD</option>
+                    <option value="MA">MA</option>
+                    <option value="MI">MI</option>
+                    <option value="MN">MN</option>
+                    <option value="MS">MS</option>
+                    <option selected="selected" value="MO">MO</option>
+                    <option value="MT">MT</option>
+                    <option value="NE">NE</option>
+                    <option value="NV">NV</option>
+                    <option value="NH">NH</option>
+                    <option value="NJ">NJ</option>
+                    <option value="NM">NM</option>
+                    <option value="NY">NY</option>
+                    <option value="NC">NC</option>
+                    <option value="ND">ND</option>
+                    <option value="OH">OH</option>
+                    <option value="OK">OK</option>
+                    <option value="OR">OR</option>
+                    <option value="PA">PA</option>
+                    <option value="RI">RI</option>
+                    <option value="SC">SC</option>
+                    <option value="SD">SD</option>
+                    <option value="TN">TN</option>
+                    <option value="TX">TX</option>
+                    <option value="UT">UT</option>
+                    <option value="VT">VT</option>
+                    <option value="VA">VA</option>
+                    <option value="WA">WA</option>
+                    <option value="WV">WV</option>
+                    <option value="WI">WI</option>
+                    <option value="WY">WY</option>
+                 </select>
+              </h4>
+              <h4>Zip-Code: <input type="text" name="zip" size ="5"/>  </h4>
+            
+          <h4>Address: <input type="text" name="address" size ="38"/> </h4></td>  
+<td> 
+          <h3>What would you like me to print? </h3>
+               <input type="radio" name="source" value="tech"/> 
+                A print you have seen on the technology page of this site <br>
+                   <input type="text" size="50" name="tech1" placeholder="ex: phone case..."> <br> <br>
+               <input type="radio" name="source" value="thing"/> 
+                A link you found on thingiverse <br>
+                   <input type="text" size="50" name="link" placeholder="paste link...">
+                   <br> <br>
+               <input type="radio" name="source" value="g_imgs"/> 
+                Miscellaneous google image <br>
+                    <input type="text" name="g_img" size="50" placeholder="image URL..."> <br>
+          <h3>ABS or PLA plastic?</h3>
+              <input type="radio" name="plastic" value="ABS"/>ABS <br>
+              <input type="radio" name="plastic" value="PLA"/>PLA <br>
+
+               <h4>Additional comments:</h4>
+               <textarea type="text" name="comment1" rows="5" cols="50" placeholder="Describe your print specifications here..."></textarea>
+          <h3> Please enter your dimensions in mm (max 249):</h3>
+              <h4>
+                  length:
+                     <input type="text" name="length" size = "3">
+                  width: 
+                     <input type="text" name="width" size = "3">
+                  height: 
+                     <input type="text" name="height" size = "3">
+              </h4>
+          <input type="submit" value="Submit form">
+       </td>
+     </form>
+    </table>
+  </div>
+</div>
+
+
+<div class="feature_section">
+    <h2>Tech</h2>
+        <p> <img class="featureimg" alt="software" src="hardware/hardware/laser.JPG">
+            As seen on the Technology page of the site, there are quite a few featured products that I have tinkered with. If you find yourself wanting a prototype or specified piece of tech that I have built, I can do that! For example, if you wanted to purchase a home automation kit including my IR bracelet, a light reciever, and an AC reciever, I could custom fit it to your specific house set up. If you have any awesome ideas for cool arduino-based technology, I am always looking for fun new projects to start so don't be afraid to make suggestions or comments in the form of an email. If you want to order something related to technology, please feel free to email me!
+        </p>
+</div>
+    
+
+</body>
+</html>
+
+            
+            

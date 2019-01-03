@@ -1,0 +1,407 @@
+body 
+{
+	background-color: black;
+	color: white;
+	font-family: Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif;
+}
+
+/*This is the main bar that goes under the navigation at the top of the screen */
+div.bar 
+{
+	z-index: +4;
+	position: fixed;
+	left:0em;
+	top:0em;
+	background-color: black;
+	padding-left: 13em;
+	opacity: 1.0 ;
+	Width: 100%;
+	height: 5em;
+	text-align: left;
+	font-family: Copperplate,"Copperplate Gothic Light",fantasy;
+	border-bottom: white solid .1px; 
+}
+
+
+h1 
+{
+	font-size:52px;
+	text-shadow: 2px 2px black;
+	font-family: 'Poiret One', cursive;
+	letter-spacing: 3px;
+	padding: 20px;  
+}
+
+h2 
+{
+	border-bottom: 2px white ridge;
+	font-weight: bold;
+	font-size: 25px;
+	font-family: 'Poiret One', cursive;
+}
+
+h3 
+{
+	font-size: 18px;
+	font-family: 'Poiret One', cursive;
+}
+
+/* This box is placed on the side for a constant black side pad */
+.sidebox
+{
+	background-color: black;
+	position: fixed;
+	top: 0;
+	left:0;
+	height: 100%;
+	width: 20px;
+}
+
+/*This is the background image at the head of every page*/
+.profile 
+{
+	position:absolute;
+	top: -2.2em;
+	left: 0em;
+	z-index: -2;
+	width: 100%;
+	height: 100%;
+}
+#orderProfile
+{
+        position:absolute;
+	top: -2.2em;
+	left: 0em;
+	z-index: -2;
+	width: 100%;
+	height: 120%;
+}
+
+/*This is the big title box on every page that has 3 subpoints */
+div.description 
+{
+	position:absolute;
+	top: 11em;
+	left: 20em;
+	background-color: black;
+	opacity: .7;
+	z-index:+3;
+	padding: 15px;
+	width: 34em;
+	line-height: 1.4em;
+	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+	border: white 2px outset;
+}
+
+#orders
+{
+    border: 1px outset white;
+    background: rgba(105,105,105,0.3);
+    position: relative;
+    top: 23em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    
+}
+#orders td
+{
+    border-bottom: 1px solid rgba(115,115,115,0.7);
+    border-right: 1px outset gray;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 5px;
+}
+#orders th
+{
+    border-bottom: 1px outset white;
+    border-right: 1px outset white;
+    background-color: black;
+}
+#form_results
+{
+	background-color: #131313;
+	margin-top: 50px;
+	margin-bottom: 40px;
+	position: relative;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 14px;
+	top: 30em;	
+	left: 14em;
+	width: 56em;
+	line-height: 28px;
+	padding: 10px;
+	padding-top: 2px;
+        opacity: .8;
+}
+
+#order_details td
+{
+   padding-left: 50px;
+   position: relative;
+   border: outset gray 2px;
+   top: -20px;
+   width: 40em;
+}
+
+/*Specifically for the contact page - the box on the side */
+.contact_section
+{
+	background-color: #131313;
+	margin-top: 50px;
+	margin-bottom: 40px;
+	position: relative;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 14px;
+	top: 25em;	
+	left: 25em;
+	width: 31em;
+	line-height: 28px;
+	padding: 10px;
+	padding-bottom: 20px;
+	padding-top: 2px;
+	opacity: 0.8;
+
+}
+
+/*The large sections of every page. Typically the first element is an h2 */
+.feature_section 
+{
+	background-color: #131313;
+	margin-top: 50px;
+	position: relative;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 13px;
+	font-weight: lighter;
+	top: 35em;	
+	left: 9em;
+	width: 82em;
+	line-height: 22px;
+	padding: 10px;
+	padding-bottom: 40px;
+	padding-top: 2px;
+	opacity: 0.8;
+}	
+
+/* The image featured within a featured section */
+.featureimg
+{
+	float: left;
+	width: 220px;
+	height: 140px;
+	filter: hue-rotate(340deg);
+	padding-right: 15px;
+}
+
+/* A sub div within the featured section */
+.project
+{	
+	font-size: 12px;
+	padding: 3px;
+	margin-left: 40px;	
+}
+
+.print_project
+{
+        font-size: 12px;
+	padding: 3px;
+	margin-left: 40px;
+        width: 50%;
+}
+
+.project_slideshow
+{
+  float: right;
+  position: relative;
+  top: 5em;
+  margin-right: 50px;
+}
+.subproject
+{
+       border: 1px outset white;
+       background-color: black;
+       padding: 10px;
+       width: 23%;
+       transition: all .5s;
+}
+
+.subimage
+{ 
+   float: left; 
+   padding-right: 20px; 
+   padding-bottom: 10px;
+}
+.drop 
+{    
+       background-color: #231313;
+       margin-left: 10px;
+       border: solid 1px black;
+       padding: 15px;
+       width: 75%;
+       display: none;
+       
+}
+
+.triangle
+{
+  width:0;
+  height: 0;
+  border-top: 15px solid #555;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  float: right;
+  position: relative;
+}
+.left
+{  position: relative;
+   top: 150px;
+   left: -4px;
+   width:0;
+   height: 0;
+   float: right;
+   border-right: 13px solid white;
+   border-top: 12px solid transparent;
+   border-bottom: 12px solid transparent;
+}
+
+.right
+{  position: relative;
+   top: 150px;
+   left: 330px;
+   width:0;
+   height: 0;
+   float: right;
+   border-left: 13px solid white;
+   border-top: 12px solid transparent;
+   border-bottom: 12px solid transparent;
+}
+/*This is the logo in the upper left corner */
+.logo {
+	position: fixed;
+	top: -5px;
+	left: 10px;
+	z-index: +5; 
+}
+
+/*This identifier is also with the logo but is specific for changing the size - connected with the PNG itself rather than the whole box*/
+#logo
+{
+	width: 30%; 
+	height: 30%;
+}
+
+/*This is the featured gallery section of the art page */
+.gallery
+{
+	position: relative;
+	top: 30em;
+	margin: 10px;
+	left: 6.5em;
+	float:left;
+	width: 15em;
+	padding: 9px;
+	height: 18em;
+	z-index: 3;
+}
+
+/*specific focus on the individual image class within the gallery */
+div.gallery img 
+{
+	width: 15em;
+	height: 12em;
+	z-index: 3;
+}
+
+.form 
+{
+    color: white;
+    background-color: #1f1f1f;
+    position: relative;
+    margin: 30px;
+    margin-top: 75px;
+    border: grey outset 3px;
+}
+
+.form td
+{
+  padding: 20px;
+  border: ridge black 2px;
+}
+
+#emblem
+{
+   position: relative;
+   top: 50px;
+}
+.form #title 
+{
+   transform: rotate(270deg); 
+   width: 100px; 
+   padding: 0px;
+   font-size: 44px;
+   line-height:50px;
+   position: relative;
+   top: 70px;
+}
+
+
+/*The description of each painting */
+div.img_desc {
+	padding: 10px;
+	text-align: center;
+	opacity: .8;
+}
+
+/*The price formatted within the painting */
+.price
+{
+	
+	font-family: 'Quicksand', sans-serif;
+	position: absolute;
+	font-size: 13px;
+        z-index: 10;
+	text-align: center;
+        display: none;
+	width: 100%;
+	left: 4px;
+	top: 5em;
+}
+
+/*The navigation at the top */
+nav ul {
+	position: fixed;
+	top: 1.5em;
+	z-index: 20;
+	list-style-type: none;
+	margin-left:7em;
+	padding: 0;
+	overflow: hidden;
+}
+
+nav li {
+	float: left;
+	padding-left: 60px;
+	opacity: .8
+}
+
+nav li a {
+	display: inline-block;
+	font-family: 'Quicksand', sans-serif;
+	padding: 10px;
+	color: white;
+	text-decoration: none;
+}
+
+nav li a:hover 
+{
+	background: white;
+	color: black;
+	opacity: 1;
+}
+
+/*The class that indicates which tab you are on in the navigation */
+.active 
+{
+    opacity: .7;
+}
